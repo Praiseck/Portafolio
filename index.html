@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manuel Duque - Portafolio</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Añade Swiper.js desde un CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     
 </head>
 <body>
@@ -26,12 +29,14 @@
         <h2>Sobre Mí</h2>
         <p>Proactivo, con ganas de aprender y fortalecer mis habilidades, con buena integración en equipos de trabajo y flexible para aprender nuevas habilidades y enfrentar los retos del trabajo.</p>
         <h3>Habilidades</h3>
-        <ul>
-            <li>Ciberseguridad</li>
-            <li>Desarrollo de Apps Móviles (Android Studio)</li>
-            <li>Bases de Datos SQL y NoSQL</li>
-            <li>Python, HTML, Java</li>
-        </ul>
+        <div>
+            <ul>
+                <li>Ciberseguridad</li>
+                <li>Desarrollo de Apps Móviles (Android Studio)</li>
+                <li>Bases de Datos SQL y NoSQL</li>
+                <li>Python, HTML, Java</li>
+            </ul>
+        </div>
     </section>
 
     <section id="experience">
@@ -59,20 +64,35 @@
 
     <section id="projects">
         <h2>Proyectos</h2>
-        <div class="project">
-            <h3>UNIPARK_V2</h3>
-            <p>App para el diagnostico de probabilidades paraa encontrar parqueadero disponible en el POLITECNICO JIC</p>
-            <a href="https://github.com/Praiseck/UniPark_V2" target="_blank">Ver en GitHub</a>
-        </div>
-        <div class="project">
-            <h3>SODOKU</h3>
-            <p>App para la solucion de Sudoku en la terminal</p>
-            <a href="https://github.com/Praiseck/Sudoku" target="_blank">Ver en GitHub</a>
-        </div>
-        <div class="project">
-            <h3>BST</h3>
-            <p>Algoritmo de árbol de busqueda binaria</p>
-            <a href="https://github.com/Praiseck/BST" target="_blank">Ver en GitHub</a>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="project">
+                        <h3>UNIPARK_V2</h3>
+                        <p>App para el diagnóstico de probabilidades para encontrar parqueadero en el POLITÉCNICO JIC.</p>
+                        <a href="https://github.com/Praiseck/UniPark_V2" target="_blank">Ver en GitHub</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project">
+                        <h3>SODOKU</h3>
+                        <p>App para la solución de Sudoku en la terminal.</p>
+                        <a href="https://github.com/Praiseck/Sudoku" target="_blank">Ver en GitHub</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="project">
+                        <h3>BST</h3>
+                        <p>Algoritmo de árbol de búsqueda binaria.</p>
+                        <a href="https://github.com/Praiseck/BST" target="_blank">Ver en GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Flechas de navegación -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <!-- Indicadores de diapositivas -->
+            <div class="swiper-pagination"></div>
         </div>
     </section>
 
@@ -90,6 +110,43 @@
     <footer>
         <p>&copy; 2025 Manuel Duque Valencia</p>
     </footer>
+    <script>
+        let currentIndex = 0;
+    
+        function moveSlide(direction) {
+            const slides = document.querySelectorAll('.carousel-slide');
+            const totalSlides = slides.length;
+    
+            currentIndex += direction;
+    
+            if (currentIndex >= totalSlides) {
+                currentIndex = 0;
+            } else if (currentIndex < 0) {
+                currentIndex = totalSlides - 1;
+            }
+    
+            const offset = -currentIndex * 100;
+            document.querySelector('.carousel-container').style.transform = `translateX(${offset}%)`;
+        }
+    </script>
+
+        <!-- Configuración del carrusel -->
+    <script>
+        const swiper = new Swiper('.swiper', {
+            loop: true, // Permite desplazamiento infinito
+            autoplay: {
+                delay: 3000, // Cambia de diapositiva cada 3 segundos
+                disableOnInteraction: false, // No se detiene al interactuar
+            },
+            pagination: {
+                el: '.swiper-pagination', // Indicadores de diapositivas
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next', // Flecha siguiente
+                prevEl: '.swiper-button-prev', // Flecha anterior
+            },
+        });
+    </script>
 </body>
 </html>
-<p>Linkedlink: https://www.linkedin.com/in/manuel-fernando-duque-valencia-3281a1129/</p>

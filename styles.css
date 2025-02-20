@@ -16,7 +16,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro semi-transparente */
+    background-color: rgb(7, 5, 5); /* Fondo oscuro semi-transparente */
     color: #fff;
     padding: 10px 0;
     text-align: center;
@@ -73,23 +73,32 @@ section {
 
 /* Imágenes de fondo para cada sección */
 #about {
-    background-image: url('about-bg.jpg'); /* Cambia 'about-bg.jpg' por tu imagen */
+    background-image: url('img//pantalla_de_computador_en_fondo_negro_en_4k_ydwxpbtlj61x27g95c8k_3.png');
+}
+
+#about h2,
+#about p,
+#about ul {
+    text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.8), /* Sombra principal */
+        0 0 8px rgba(0, 0, 0, 0.8),     /* Contorno más grueso */
+        0 0 12px rgba(0, 0, 0, 0.8);    /* Contorno aún más grueso */
 }
 
 #experience {
-    background-image: url('experience-bg.jpg'); /* Cambia 'experience-bg.jpg' por tu imagen */
+    background-image: url('img/zoom-velocidad-tubo-luz-azul-abstracto-tecnologia-fondo-negro_1142-8392.avif'); 
 }
 
 #certifications {
-    background-image: url('certifications-bg.jpg'); /* Cambia 'certifications-bg.jpg' por tu imagen */
+    background-image: url('img/zoom-velocidad-tubo-luz-azul-abstracto-tecnologia-fondo-negro_1142-8392.avif'); 
 }
 
 #projects {
-    background-image: url('projects-bg.jpg'); /* Cambia 'projects-bg.jpg' por tu imagen */
+    background-image: url('img/About.png'); 
 }
 
 #contact {
-    background-image: url('contact-bg.jpg'); /* Cambia 'contact-bg.jpg' por tu imagen */
+    background-image: url('img/zoom-velocidad-tubo-luz-azul-abstracto-tecnologia-fondo-negro_1142-8392.avif');
 }
 
 /* Estilos para el contenido dentro de las secciones */
@@ -245,4 +254,138 @@ footer p {
         width: 100%;
         text-align: center;
     }
+}
+
+/* Estilos para el carrusel */
+.carousel {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 24px;
+    z-index: 10;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+.carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Estilos para los proyectos dentro del carrusel */
+.project {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+.project h3 {
+    margin-top: 0;
+    color: #00bcd4;
+}
+
+.project a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #00bcd4;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.project a:hover {
+    background-color: #0097a7;
+}
+
+/* Estilos para el carrusel con Swiper */
+/* Estilos para el carrusel con Swiper */
+.swiper {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.swiper-slide {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribuye el espacio uniformemente */
+    height: 300px; /* Altura fija para todas las diapositivas */
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño */
+}
+
+.swiper-slide h3 {
+    margin-top: 0;
+    color: #00bcd4;
+    font-size: 1.5em; /* Tamaño uniforme para los títulos */
+}
+
+.swiper-slide p {
+    margin: 10px 0;
+    font-size: 1em; /* Tamaño uniforme para los párrafos */
+    flex-grow: 1; /* Permite que el párrafo ocupe el espacio disponible */
+}
+
+.swiper-slide a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #00bcd4;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em; /* Tamaño uniforme para los enlaces */
+}
+
+.swiper-slide a:hover {
+    background-color: #0097a7;
+}
+
+/* Flechas de navegación */
+.swiper-button-next, .swiper-button-prev {
+    color: #00bcd4;
+}
+
+/* Indicadores de diapositivas */
+.swiper-pagination-bullet {
+    background-color: #00bcd4;
 }
