@@ -31,35 +31,49 @@
         <h3>Habilidades</h3>
         <div>
             <ul>
-                <li>Ciberseguridad</li>
-                <li>Desarrollo de Apps Móviles (Android Studio)</li>
-                <li>Bases de Datos SQL y NoSQL</li>
-                <li>Python, HTML, Java</li>
-            </ul>
+            <li>Ciberseguridad</li>
+            <li>Desarrollo de Apps Móviles (Android Studio)</li>
+            <li>Bases de Datos SQL y NoSQL</li>
+            <li>Python, HTML, Java, JavaScript, C++</li>
+        </ul>
         </div>
     </section>
 
     <section id="experience">
         <h2>Experiencia Laboral</h2>
         <ul>
-            <li>ArtVisual (2020 - Actualidad) - Oficios Varios</li>
-            <li>MANPOWER (2015) - Empleado Temporal</li>
-            <li>Lolaperola (2013) - Domiciliario</li>
+            <li>Gonserautos (2020 - Actualidad) - Oficios Varios</li><br>
+            <li>ArtVisual (2020 - Actualidad) - Oficios Varios</li><br>
+            <li>MANPOWER (2015) - Empleado Temporal</li><br>
+            <li>Lolaperola (2013) - Domiciliario</li><br>
         </ul>
     </section>
 
     <section id="certifications">
         <h2>Certificaciones</h2>
-        <div class="certificate">
-            <h3>Scientific Computing with Python</h3>
-            <p>Este certificado fue otorgado por FreeCodeCamp por completar con éxito el curso de "Scientific Computing with Python". El curso cubre temas avanzados de programación en Python, incluyendo estructuras de datos, algoritmos y aplicaciones científicas.</p>
-            <a href="https://www.freecodecamp.org/certification/fcc16bec379-e05e-4266-bda5-f61942dbc6a8/scientific-computing-with-python-v7" target="_blank">Verificar Certificado</a>
-        </div>
-        <div class="certificate">
-            <h3>Fundations of cibersecurity</h3>
-            <p>Este certificado fue otorgado por Google por completar con éxito el curso de "Fundations of cibersecurity". En este se trataron temas esenciales sobre la historia de la ciberseguridad y marcos y leyes.</p>
-            <a href="https://coursera.org/share/4e64e51e24cbb93530cee925bf655f88" target="_blank">Verificar Certificado</a>
-        </div>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="certificate">
+                        <h3>Analyst of Cibersecurity</h3>
+                        <p>Este certificado fue otorgado por Google por completar con éxito el curso de "Analyst of Cibersecurity". En este se trataron temas esenciales sobre la historia de la ciberseguridad y marcos y leyes.</p>
+                        <a href="https://coursera.org/share/4e64e51e24cbb93530cee925bf655f88" target="_blank">Verificar Certificado</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="certificate">
+                        <h3>Fundations of cibersecurity</h3>
+                        <p>Este certificado fue otorgado por Google por completar con éxito el curso de "Fundations of cibersecurity". En este se trataron temas esenciales sobre la historia de la ciberseguridad y marcos y leyes.</p>
+                        <a href="https://coursera.org/share/4e64e51e24cbb93530cee925bf655f88" target="_blank">Verificar Certificado</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Flechas de navegación -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <!-- Indicadores de diapositivas -->
+            <div class="swiper-pagination"></div>
+        </div>        
     </section>
 
     <section id="projects">
@@ -76,7 +90,7 @@
                 <div class="swiper-slide">
                     <div class="project">
                         <h3>SODOKU</h3>
-                        <p>App para la solución de Sudoku en la terminal.</p>
+                        <p>Algoritmo para la solución de Sudoku en la terminal.</p>
                         <a href="https://github.com/Praiseck/Sudoku" target="_blank">Ver en GitHub</a>
                     </div>
                 </div>
@@ -135,7 +149,7 @@
         const swiper = new Swiper('.swiper', {
             loop: true, // Permite desplazamiento infinito
             autoplay: {
-                delay: 3000, // Cambia de diapositiva cada 3 segundos
+                delay: 5000, // Cambia de diapositiva cada 3 segundos
                 disableOnInteraction: false, // No se detiene al interactuar
             },
             pagination: {

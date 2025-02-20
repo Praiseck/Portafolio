@@ -16,21 +16,19 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgb(7, 5, 5); /* Fondo oscuro semi-transparente */
+    background-image: url('img/laptop-with-glowing-screen-table-dark-top-view-copy-space.jpg');
+    background-size: cover; /* Ajusta la imagen para cubrir todo el header */
+    background-position: center; /* Centra la imagen */
     color: #fff;
     padding: 10px 0;
     text-align: center;
-    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    z-index: 1000;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2em;
-}
-
+header h1,
 header p {
-    margin: 5px 0 0;
-    font-size: 1em;
+    position: relative;
+    z-index: 1; /* Coloca el texto por encima del fondo */
 }
 
 nav ul {
@@ -105,7 +103,7 @@ section {
 section h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
-    color: #00bcd4; /* Color de resaltado para títulos */
+    color: #19bac0; /* Color de resaltado para títulos */
     border-bottom: 2px solid #00bcd4;
     padding-bottom: 10px;
 }
@@ -127,6 +125,7 @@ section ul {
     list-style-type: square;
     padding-left: 20px;
     text-align: left;
+    align-items: center;
 }
 
 /* Certificados y Proyectos */
