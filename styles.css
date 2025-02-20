@@ -1,116 +1,248 @@
+/* styles.css */
+
+/* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #1a1a1a; /* Fondo oscuro */
+    color: #f4f4f4; /* Texto claro */
 }
 
+/* Navegación fija */
 header {
-    background: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro semi-transparente */
     color: #fff;
-    padding: 1rem 0;
+    padding: 10px 0;
     text-align: center;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
 }
 
 header h1 {
     margin: 0;
+    font-size: 2em;
+}
+
+header p {
+    margin: 5px 0 0;
+    font-size: 1em;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 10px 0 0;
 }
 
 nav ul li {
     display: inline;
-    margin: 0 10px;
+    margin: 0 15px;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-weight: bold;
 }
 
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #00bcd4; /* Color de resaltado al pasar el mouse */
+}
+
+/* Secciones que ocupan el 100% del viewport */
 section {
-    padding: 2rem;
-    margin: 1rem 0;
-    background: #fff;
+    min-height: 100vh; /* Ocupa el 100% del alto de la pantalla */
+    padding: 80px 20px 20px; /* Ajuste para la navegación fija */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-size: cover; /* Cubre toda la sección con la imagen */
+    background-position: center; /* Centra la imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    color: #fff; /* Texto claro para contrastar con el fondo */
 }
 
-footer {
-    text-align: center;
-    padding: 1rem 0;
-    background: #333;
-    color: #fff;
+/* Imágenes de fondo para cada sección */
+#about {
+    background-image: url('about-bg.jpg'); /* Cambia 'about-bg.jpg' por tu imagen */
+}
+
+#experience {
+    background-image: url('experience-bg.jpg'); /* Cambia 'experience-bg.jpg' por tu imagen */
 }
 
 #certifications {
-    background-color: #f9f9f9;
-    padding: 2rem;
-    margin: 1rem 0;
-}
-
-.certificate {
-    background-color: #fff;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border-left: 5px solid #333;
-}
-
-.certificate h3 {
-    margin-top: 0;
-}
-
-.certificate a {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 15px;
-    background-color: #333;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.certificate a:hover {
-    background-color: #555;
+    background-image: url('certifications-bg.jpg'); /* Cambia 'certifications-bg.jpg' por tu imagen */
 }
 
 #projects {
-    background-color: #f9f9f9;
-    padding: 2rem;
-    margin: 1rem 0;
+    background-image: url('projects-bg.jpg'); /* Cambia 'projects-bg.jpg' por tu imagen */
 }
 
-.project {
-    background-color: #fff;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border-left: 5px solid #333;
+#contact {
+    background-image: url('contact-bg.jpg'); /* Cambia 'contact-bg.jpg' por tu imagen */
 }
 
-.project h3 {
+/* Estilos para el contenido dentro de las secciones */
+section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #00bcd4; /* Color de resaltado para títulos */
+    border-bottom: 2px solid #00bcd4;
+    padding-bottom: 10px;
+}
+
+section h3 {
+    font-size: 1.8em;
+    margin-top: 20px;
+    color: #00bcd4; /* Color de resaltado para subtítulos */
+}
+
+section p, section ul {
+    font-size: 1.1em;
+    line-height: 1.8;
+    max-width: 800px;
+    width: 100%;
+}
+
+section ul {
+    list-style-type: square;
+    padding-left: 20px;
+    text-align: left;
+}
+
+/* Certificados y Proyectos */
+.certificate, .project {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semi-transparente */
+    border-left: 5px solid #00bcd4;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 800px;
+    text-align: left;
+}
+
+.certificate h3, .project h3 {
     margin-top: 0;
+    color: #00bcd4; /* Color de resaltado para títulos */
 }
 
-.project a {
+.certificate p, .project p {
+    margin: 10px 0;
+}
+
+.certificate a, .project a {
     display: inline-block;
     margin-top: 10px;
-    margin-right: 10px;
     padding: 10px 15px;
-    background-color: #333;
+    background-color: #00bcd4; /* Color de resaltado para botones */
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
 }
 
-.project a:hover {
-    background-color: #555;
+.certificate a:hover, .project a:hover {
+    background-color: #0097a7; /* Color de resaltado al pasar el mouse */
 }
 
-.project img {
-    max-width: 100%;
-    height: auto;
-    margin-top: 10px;
+/* Estilos para la sección de contacto */
+#contact {
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro semi-transparente */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#contact h2 {
+    color: #00bcd4; /* Color de resaltado */
+    margin-bottom: 20px;
+}
+
+#contact p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+/* Estilos para los enlaces de redes sociales */
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #00bcd4; /* Color de resaltado */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: #0097a7; /* Color de resaltado al pasar el mouse */
+}
+
+.social-links i {
+    margin-right: 8px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro semi-transparente */
+    color: #fff;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    header p {
+        font-size: 0.9em;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 80px 15px 15px; /* Ajuste para la navegación fija */
+    }
+
+    section h2 {
+        font-size: 2em;
+    }
+
+    section h3 {
+        font-size: 1.5em;
+    }
+
+    section p, section ul {
+        font-size: 1em;
+    }
+
+    .certificate a, .project a {
+        width: 100%;
+        text-align: center;
+    }
 }
