@@ -6,7 +6,11 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #1a1a1a; /* Fondo oscuro */
+    height: 100%; /* Asegura que el body ocupe toda la altura de la ventana */
+    background-image: url('img/BGCVManuel-01.png'); /* Reemplaza con la ruta de tu imagen */
+    background-size: cover; /* La imagen cubrirá todo el fondo */
+    background-position: center; /* La imagen estará centrada */
+    background-repeat: no-repeat; /* La imagen no se repetirá */
     color: #f4f4f4; /* Texto claro */
 }
 
@@ -70,9 +74,11 @@ section {
 }
 
 /* Imágenes de fondo para cada sección */
+/*
 #about {
     background-image: url('img//pantalla_de_computador_en_fondo_negro_en_4k_ydwxpbtlj61x27g95c8k_3.png');
 }
+*/
 
 #about h2,
 #about p,
@@ -83,6 +89,7 @@ section {
         0 0 12px rgba(0, 0, 0, 0.8);    /* Contorno aún más grueso */
 }
 
+/*
 #experience {
     background-image: url('img/zoom-velocidad-tubo-luz-azul-abstracto-tecnologia-fondo-negro_1142-8392.avif'); 
 }
@@ -98,6 +105,7 @@ section {
 #contact {
     background-image: url('img/zoom-velocidad-tubo-luz-azul-abstracto-tecnologia-fondo-negro_1142-8392.avif');
 }
+*/
 
 /* Estilos para el contenido dentro de las secciones */
 section h2 {
