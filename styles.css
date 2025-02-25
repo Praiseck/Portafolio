@@ -185,7 +185,7 @@ section ul {
 
 .certificate-image {
     position: relative;
-    width: 100%;
+    size: 500px;
     max-width: 400px;
     overflow: hidden;
     border: 2px solid var(--primary-color);
