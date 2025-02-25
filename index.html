@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manuel Duque - Portafolio</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Añade Swiper.js desde un CDN -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -25,31 +24,28 @@
         </nav>
     </header>
 
-    <section id="about">
+    <section id="about" class="fade-in">
         <h2>Sobre Mí</h2>
         <p>Proactivo, con deseos de fortalecer mis conocimientos, buena integración en equipos de trabajo y flexible para aprender nuevas habilidades y enfrentar nuevos retos.</p>
         <h3>Habilidades</h3>
-        <div>
-            <ul>
-            <li> Analista de Ciberseguridad</li>
+        <ul>
+            <li>Analista de Ciberseguridad</li>
             <li>Python, HTML, Java, JavaScript, C++</li>
-            <li>Menejo en Bases de Datos SQL y NoSQL a nivel intermedio</li>
+            <li>Manejo en Bases de Datos SQL y NoSQL a nivel intermedio</li>
             <li>Desarrollo de Apps Móviles (Android Studio)</li>
         </ul>
-        </div>
     </section>
 
-    <section id="experience">
+    <section id="experience" class="fade-in">
         <h2>Experiencia Laboral</h2>
         <ul>
             <li>Gonserautos (2020 - Actualidad) - Oficios Varios</li><br>
             <li>ArtVisual (2020 - Actualidad) - Oficios Varios</li><br>
             <li>MANPOWER (2015) - Empleado Temporal</li><br>
-            <li>Lolaperola (2013) - Domiciliario</li><br>
         </ul>
     </section>
 
-    <section id="certifications">
+    <section id="certifications" class="fade-in">
         <h2>Certificaciones</h2>
         <div class="swiper">
             <div class="swiper-wrapper">
@@ -68,15 +64,13 @@
                     </div>
                 </div>
             </div>
-            <!-- Flechas de navegación -->
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
-            <!-- Indicadores de diapositivas -->
             <div class="swiper-pagination"></div>
-        </div>        
+        </div>
     </section>
 
-    <section id="projects">
+    <section id="projects" class="fade-in">
         <h2>Proyectos</h2>
         <div class="swiper">
             <div class="swiper-wrapper">
@@ -102,15 +96,13 @@
                     </div>
                 </div>
             </div>
-            <!-- Flechas de navegación -->
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
-            <!-- Indicadores de diapositivas -->
             <div class="swiper-pagination"></div>
         </div>
     </section>
 
-    <section id="contact">
+    <section id="contact" class="fade-in">
         <h2>Contacto</h2>
         <p>Email: manferduval15@gmail.com</p>
         <p>Teléfono: +57 311 624 5365</p>
@@ -124,43 +116,26 @@
     <footer>
         <p>&copy; 2025 Manuel Duque Valencia</p>
     </footer>
-    <script>
-        let currentIndex = 0;
-    
-        function moveSlide(direction) {
-            const slides = document.querySelectorAll('.carousel-slide');
-            const totalSlides = slides.length;
-    
-            currentIndex += direction;
-    
-            if (currentIndex >= totalSlides) {
-                currentIndex = 0;
-            } else if (currentIndex < 0) {
-                currentIndex = totalSlides - 1;
-            }
-    
-            const offset = -currentIndex * 100;
-            document.querySelector('.carousel-container').style.transform = `translateX(${offset}%)`;
-        }
-    </script>
 
-        <!-- Configuración del carrusel -->
     <script>
         const swiper = new Swiper('.swiper', {
-            loop: true, // Permite desplazamiento infinito
+            loop: true,
             autoplay: {
-                delay: 5000, // Cambia de diapositiva cada 3 segundos
-                disableOnInteraction: false, // No se detiene al interactuar
+                delay: 5000,
+                disableOnInteraction: false,
             },
             pagination: {
-                el: '.swiper-pagination', // Indicadores de diapositivas
+                el: '.swiper-pagination',
                 clickable: true,
             },
             navigation: {
-                nextEl: '.swiper-button-next', // Flecha siguiente
-                prevEl: '.swiper-button-prev', // Flecha anterior
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
             },
         });
     </script>
+
+    <script src="scripts.js"></script>
+    <button id="scroll-to-top" title="Volver arriba">↑</button>
 </body>
 </html>

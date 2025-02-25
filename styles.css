@@ -1,38 +1,57 @@
-/* styles.css */
+/* ---------------------------- */
+/* Variables CSS */
+/* ---------------------------- */
+:root {
+    --primary-color: #00bcd4; /* Color principal */
+    --primary-hover: #0097a7; /* Color principal al pasar el mouse */
+    --background-dark: rgba(0, 0, 0, 0.7); /* Fondo oscuro semi-transparente */
+    --text-light: #fff; /* Texto claro */
+    --text-dark: #333; /* Texto oscuro */
+    --shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Sombra estándar */
+}
 
+/* ---------------------------- */
 /* Estilos generales */
+/* ---------------------------- */
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    height: 100%; /* Asegura que el body ocupe toda la altura de la ventana */
-    background-image: url('img/BGCVManuel-01.png'); /* Reemplaza con la ruta de tu imagen */
-    background-size: cover; /* La imagen cubrirá todo el fondo */
-    background-position: center; /* La imagen estará centrada */
-    background-repeat: no-repeat; /* La imagen no se repetirá */
-    color: #f4f4f4; /* Texto claro */
+    height: 100%;
+    background-image: url('img/BGCVManuel-01.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--text-light);
 }
 
+/* ---------------------------- */
 /* Navegación fija */
+/* ---------------------------- */
 header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     background-image: url('img/laptop-with-glowing-screen-table-dark-top-view-copy-space.jpg');
-    background-size: cover; /* Ajusta la imagen para cubrir todo el header */
-    background-position: center; /* Centra la imagen */
-    color: #fff;
+    background-size: cover;
+    background-position: center;
+    color: var(--text-light);
     padding: 10px 0;
     text-align: center;
     z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+header.scrolled {
+    background-color: rgba(0, 0, 0, 0.9); /* Fondo más oscuro al hacer scroll */
 }
 
 header h1,
 header p {
     position: relative;
-    z-index: 1; /* Coloca el texto por encima del fondo */
+    z-index: 1;
 }
 
 nav ul {
@@ -47,79 +66,48 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: var(--text-light);
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
     text-decoration: underline;
-    color: #00bcd4; /* Color de resaltado al pasar el mouse */
+    color: var(--primary-color);
 }
 
-/* Secciones que ocupan el 100% del viewport */
+/* ---------------------------- */
+/* Secciones */
+/* ---------------------------- */
 section {
-    min-height: 100vh; /* Ocupa el 100% del alto de la pantalla */
-    padding: 80px 20px 20px; /* Ajuste para la navegación fija */
+    min-height: 100vh;
+    padding: 80px 20px 20px;
     margin: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-size: cover; /* Cubre toda la sección con la imagen */
-    background-position: center; /* Centra la imagen de fondo */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    color: #fff; /* Texto claro para contrastar con el fondo */
+    text-size-adjust: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--text-light);
 }
 
-/* Imágenes de fondo para cada sección */
-/*
-#about {
-    background-image: url('img//pantalla_de_computador_en_fondo_negro_en_4k_ydwxpbtlj61x27g95c8k_3.png');
-}
-*/
-
-#about h2,
-#about p,
-#about ul {
-    text-shadow: 
-        2px 2px 4px rgba(0, 0, 0, 0.8), /* Sombra principal */
-        0 0 8px rgba(0, 0, 0, 0.8),     /* Contorno más grueso */
-        0 0 12px rgba(0, 0, 0, 0.8);    /* Contorno aún más grueso */
-}
-
-/*
-#experience {
-    background-image: url('img/zoom-velocidad-tubo-luz-azul-abstracto-tecnologia-fondo-negro_1142-8392.avif'); 
-}
-
-#certifications {
-    background-image: url('img/zoom-velocidad-tubo-luz-azul-abstracto-tecnologia-fondo-negro_1142-8392.avif'); 
-}
-
-#projects {
-    background-image: url('img/About.png'); 
-}
-
-#contact {
-    background-image: url('img/zoom-velocidad-tubo-luz-azul-abstracto-tecnologia-fondo-negro_1142-8392.avif');
-}
-*/
-
-/* Estilos para el contenido dentro de las secciones */
 section h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
-    color: #19bac0; /* Color de resaltado para títulos */
-    border-bottom: 2px solid #00bcd4;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
     padding-bottom: 10px;
 }
 
 section h3 {
     font-size: 1.8em;
     margin-top: 20px;
-    color: #00bcd4; /* Color de resaltado para subtítulos */
+    color: var(--primary-color);
 }
 
 section p, section ul {
@@ -133,15 +121,16 @@ section ul {
     list-style-type: square;
     padding-left: 20px;
     text-align: left;
-    align-items: center;
 }
 
+/* ---------------------------- */
 /* Certificados y Proyectos */
+/* ---------------------------- */
 .certificate, .project {
     margin-bottom: 20px;
     padding: 15px;
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semi-transparente */
-    border-left: 5px solid #00bcd4;
+    background-color: var(--background-dark);
+    border-left: 5px solid var(--primary-color);
     border-radius: 5px;
     width: 100%;
     max-width: 800px;
@@ -150,7 +139,7 @@ section ul {
 
 .certificate h3, .project h3 {
     margin-top: 0;
-    color: #00bcd4; /* Color de resaltado para títulos */
+    color: var(--primary-color);
 }
 
 .certificate p, .project p {
@@ -161,25 +150,28 @@ section ul {
     display: inline-block;
     margin-top: 10px;
     padding: 10px 15px;
-    background-color: #00bcd4; /* Color de resaltado para botones */
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--text-light);
     text-decoration: none;
     border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .certificate a:hover, .project a:hover {
-    background-color: #0097a7; /* Color de resaltado al pasar el mouse */
+    background-color: var(--primary-hover);
 }
 
-/* Estilos para la sección de contacto */
+/* ---------------------------- */
+/* Contacto */
+/* ---------------------------- */
 #contact {
-    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro semi-transparente */
+    background-color: var(--background-dark);
     padding: 60px 20px;
     text-align: center;
 }
 
 #contact h2 {
-    color: #00bcd4; /* Color de resaltado */
+    color: var(--primary-color);
     margin-bottom: 20px;
 }
 
@@ -188,7 +180,6 @@ section ul {
     margin: 10px 0;
 }
 
-/* Estilos para los enlaces de redes sociales */
 .social-links {
     margin-top: 20px;
 }
@@ -197,28 +188,32 @@ section ul {
     display: inline-block;
     margin: 0 10px;
     padding: 10px 20px;
-    background-color: #00bcd4; /* Color de resaltado */
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--text-light);
     text-decoration: none;
     border-radius: 5px;
     font-size: 1.1em;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .social-links a:hover {
-    background-color: #0097a7; /* Color de resaltado al pasar el mouse */
+    background-color: var(--primary-hover);
+    transform: translateY(-3px);
 }
 
 .social-links i {
     margin-right: 8px;
 }
 
+/* ---------------------------- */
 /* Footer */
+/* ---------------------------- */
 footer {
     text-align: center;
     padding: 20px 0;
-    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro semi-transparente */
-    color: #fff;
+    background-color: var(--background-dark);
+    color: var(--text-light);
+    border-top: 2px solid var(--primary-color);
 }
 
 footer p {
@@ -226,7 +221,9 @@ footer p {
     font-size: 1em;
 }
 
+/* ---------------------------- */
 /* Responsive Design */
+/* ---------------------------- */
 @media (max-width: 768px) {
     header h1 {
         font-size: 1.8em;
@@ -242,7 +239,7 @@ footer p {
     }
 
     section {
-        padding: 80px 15px 15px; /* Ajuste para la navegación fija */
+        padding: 80px 15px 15px;
     }
 
     section h2 {
@@ -257,89 +254,24 @@ footer p {
         font-size: 1em;
     }
 
+    .certificate, .project {
+        padding: 10px;
+    }
+
     .certificate a, .project a {
         width: 100%;
         text-align: center;
     }
+
+    .swiper-slide {
+        height: auto;
+        padding: 15px;
+    }
 }
 
-/* Estilos para el carrusel */
-.carousel {
-    position: relative;
-    max-width: 800px;
-    margin: 0 auto;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.carousel-container {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.carousel-slide {
-    min-width: 100%;
-    box-sizing: border-box;
-    padding: 20px;
-    text-align: center;
-}
-
-.carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 50%;
-    font-size: 24px;
-    z-index: 10;
-}
-
-.carousel-button.prev {
-    left: 10px;
-}
-
-.carousel-button.next {
-    right: 10px;
-}
-
-.carousel-button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Estilos para los proyectos dentro del carrusel */
-.project {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    border-radius: 10px;
-    color: white;
-}
-
-.project h3 {
-    margin-top: 0;
-    color: #00bcd4;
-}
-
-.project a {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 15px;
-    background-color: #00bcd4;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.project a:hover {
-    background-color: #0097a7;
-}
-
-/* Estilos para el carrusel con Swiper */
-/* Estilos para el carrusel con Swiper */
+/* ---------------------------- */
+/* Carrusel con Swiper */
+/* ---------------------------- */
 .swiper {
     width: 100%;
     max-width: 800px;
@@ -348,51 +280,92 @@ footer p {
 }
 
 .swiper-slide {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: var(--background-dark);
     padding: 20px;
     border-radius: 10px;
-    color: white;
+    color: var(--text-light);
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Distribuye el espacio uniformemente */
-    height: 300px; /* Altura fija para todas las diapositivas */
-    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño */
+    justify-content: space-between;
+    height: 300px;
+    box-sizing: border-box;
 }
 
 .swiper-slide h3 {
     margin-top: 0;
-    color: #00bcd4;
-    font-size: 1.5em; /* Tamaño uniforme para los títulos */
+    color: var(--primary-color);
+    font-size: 1.5em;
 }
 
 .swiper-slide p {
     margin: 10px 0;
-    font-size: 1em; /* Tamaño uniforme para los párrafos */
-    flex-grow: 1; /* Permite que el párrafo ocupe el espacio disponible */
+    font-size: 1em;
+    flex-grow: 1;
 }
 
 .swiper-slide a {
     display: inline-block;
     margin-top: 10px;
     padding: 10px 15px;
-    background-color: #00bcd4;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--text-light);
     text-decoration: none;
     border-radius: 5px;
-    font-size: 1em; /* Tamaño uniforme para los enlaces */
+    font-size: 1em;
 }
 
 .swiper-slide a:hover {
-    background-color: #0097a7;
+    background-color: var(--primary-hover);
 }
 
-/* Flechas de navegación */
 .swiper-button-next, .swiper-button-prev {
-    color: #00bcd4;
+    color: var(--primary-color);
 }
 
-/* Indicadores de diapositivas */
 .swiper-pagination-bullet {
-    background-color: #00bcd4;
+    background-color: var(--primary-color);
+}
+
+
+/* ---------------------------- */
+/* Carrusel con Swiper */
+/* ---------------------------- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-out;
+}
+
+
+/* ---------------------------- */
+/* Carrusel con Swiper */
+/* ---------------------------- */
+#scroll-to-top {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#scroll-to-top:hover {
+    background-color: var(--primary-hover);
+    transform: scale(1.1); /* Efecto de escala al pasar el mouse */
+}
+
+#scroll-to-top:active {
+    transform: scale(0.9); /* Efecto de clic */
 }
