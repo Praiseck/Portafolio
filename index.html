@@ -13,7 +13,8 @@
     <header>
         <h1>Manuel Duque Valencia</h1>
         <p>Ingeniero en Informática & Analyst of Cibersecurity</p>
-        <nav>
+        <button id="menu-toggle">☰</button> 
+        <nav id="main-nav">
             <ul>
                 <li><a href="#about">Sobre Mí</a></li>
                 <li><a href="#experience">Experiencia</a></li>
@@ -50,19 +51,30 @@
         <div class="swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <div class="certificate">
-                        <h3>Scientific computing with Python</h3>
-                        <p>Este certificado fue otorgado por Freecodecamp por completar con éxito el curso de "Scientific computing with Python".</p>
-                        <a href="https://www.freecodecamp.org/certification/fcc16bec379-e05e-4266-bda5-f61942dbc6a8/scientific-computing-with-python-v7" target="_blank">Verificar Certificado</a>
+                    <h3>Scientific computing with Python</h3>
+                    <div class="certificate-content">
+                        <div class="certificate-image">
+                            <img src="img/Freecodecamp-certified.PNG" alt="Certificado" class="protected-image">
+                        </div>
+                        <div class="certificate-description">
+                            <p>Este certificado fue otorgado por Freecodecamp por completar con éxito el curso de "Scientific computing with Python".</p>
+                            <a href="https://www.freecodecamp.org/certification/fcc16bec379-e05e-4266-bda5-f61942dbc6a8/scientific-computing-with-python-v7" target="_blank">Verificar Certificado</a>
+                        </div>
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="certificate">
-                        <h3>Fundations of cibersecurity</h3>
-                        <p>Este certificado fue otorgado por Google por completar con éxito el curso de "Fundations of cibersecurity".</p>
-                        <a href="https://coursera.org/share/4e64e51e24cbb93530cee925bf655f88" target="_blank">Verificar Certificado</a>
+                    <h3>Fundations of Cybersecurity</h3>
+                    <div class="certificate-content">
+                        <div class="certificate-image">
+                            <img src="img/Google-certified1.PNG" alt="Certificado" class="protected-image">
+                        </div>
+                        <div class="certificate-description">
+                            <p>Este certificado fue otorgado por Google por completar con éxito el curso de "Fundations of Cybersecurity".</p>
+                            <a href="https://www.freecodecamp.org/certification/fcc16bec379-e05e-4266-bda5-f61942dbc6a8/scientific-computing-with-python-v7" target="_blank">Verificar Certificado</a>
+                        </div>
                     </div>
                 </div>
+                <!-- Repite para más certificados -->
             </div>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
@@ -70,31 +82,35 @@
         </div>
     </section>
 
-    <section id="projects" class="fade-in">
+    <section id="projects">
         <h2>Proyectos</h2>
         <div class="swiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <div class="project">
-                        <h3>UNIPARK_V2</h3>
-                        <p>App para el diagnóstico de probabilidades para encontrar parqueadero en el POLITÉCNICO JIC.</p>
-                        <a href="https://github.com/Praiseck/UniPark_V2" target="_blank">Ver en GitHub</a>
+                    <h3>UNIPARK_V2</h3>
+                    <div class="project-content">
+                        <div class="project-image">
+                            <img src="img/UniparkV2.PNG" alt="Proyecto UNIPARK_V2" class="protected-image">
+                        </div>
+                        <div class="project-description">
+                            <p>App para el diagnóstico de probabilidades para encontrar parqueadero en el POLITÉCNICO JIC.</p>
+                            <a href="https://github.com/Praiseck/UniPark_V2" target="_blank">Ver en GitHub</a>
+                        </div>
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="project">
-                        <h3>SODOKU</h3>
-                        <p>Algoritmo para la solución de Sudoku en la terminal.</p>
-                        <a href="https://github.com/Praiseck/Sudoku" target="_blank">Ver en GitHub</a>
+                    <h3>SODOKU</h3>
+                    <div class="project-content">
+                        <div class="project-image">
+                            <img src="img/Sudoku.PNG" alt="Proyecto SODOKU" class="protected-image">
+                        </div>
+                        <div class="project-description">
+                            <p>Algoritmo para la solución de Sudoku en la terminal.</p>
+                            <a href="https://github.com/Praiseck/Sudoku" target="_blank">Ver en GitHub</a>
+                        </div>
                     </div>
                 </div>
-                <div class="swiper-slide">
-                    <div class="project">
-                        <h3>BST</h3>
-                        <p>Algoritmo de árbol de búsqueda binaria.</p>
-                        <a href="https://github.com/Praiseck/BST" target="_blank">Ver en GitHub</a>
-                    </div>
-                </div>
+                <!-- Repite para más proyectos -->
             </div>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
@@ -109,6 +125,9 @@
         <div class="social-links">
             <a href="https://www.linkedin.com/in/manuel-fernando-duque-valencia-3281a1129/" target="_blank" aria-label="LinkedIn">
                 <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com/Praiseck" target="_blank" aria-label="GitHub">
+                <i class="fab fa-linkedin"></i> GitHub
             </a>
         </div>
     </section>
