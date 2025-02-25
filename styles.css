@@ -204,6 +204,13 @@ section ul {
     max-width: 600px;
 }
 
+.certificate-image img, .project-image img {
+    width: 100%; /* Ajusta al ancho del contenedor */
+    max-width: 400px; /* Tamaño máximo */
+    height: auto; /* Mantiene la proporción */
+    border-radius: 10px;
+}
+
 @media (max-width: 768px) {
     .certificate-content {
         flex-direction: column;
